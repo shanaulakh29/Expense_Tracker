@@ -8,7 +8,7 @@ import AddTransaction from './components/addtransaction.js'
 import Darkmode from './components/darkmode.js'
 function App() {
   return (
-    <div className="flex border items-center  min-h-screen">
+    <div className="flex  items-center  min-h-screen">
     <div className="md:container mx-auto border-0 lg:border-4 lg:border-green-500 rounded-2xl">
      <div className="flex justify-between ">
     <Header/>
