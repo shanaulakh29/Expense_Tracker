@@ -10,12 +10,12 @@ import {setTransaction} from './singletransactionslice.js'
 
 
 
-
+let colors=["text-red-200","text-yellow-800","text-green-300","text-blue-900","text-pink-100","text-orange-300"]
 function AddTransaction(){
   let transactionhead=useRef();
   let errordiv=useRef();
     const dispatch=useDispatch();
-let colors=["text-red-200","text-yellow-800","text-green-300","text-blue-900","text-pink-100","text-orange-300"]
+
 
     const [type,setType]=useState("");
     const [amount,setAmount]=useState("");
@@ -67,19 +67,25 @@ setAmount("");
     }
     useEffect(()=>{
       let i=0
+      let element=transactionhead.current;
       let intervalid= setInterval(()=>{
-        if (transactionhead.current) {
-          transactionhead.current.classList.remove(colors[i]);
+        
+        if (element) {
+          element.classList.remove(colors[i]);
           i = (i + 1) % colors.length;
-          transactionhead.current.classList.add(colors[i]);
+          element.classList.add(colors[i]);
         }
       
       },500)
     
       return ()=>{
         clearInterval(intervalid);
-        transactionhead.current.classList.remove(colors[i]);
-      }},[colors]);
+        if(element)
+        {
+          element.classList.remove(colors[i]);
+        }
+        
+      }},[]);
   return (
     <div className="flex items-center flex-col ">
     <h2 ref={transactionhead} className="pb-2 text-xl lg:text-2xl w-96 text-center tracking-widest font-bold animate-pulse">Add New Transaction</h2>
