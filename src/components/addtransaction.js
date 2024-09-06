@@ -79,7 +79,7 @@ setAmount("");
       return ()=>{
         clearInterval(intervalid);
         transactionhead.current.classList.remove(colors[i]);
-      }},[]);
+      }},[colors]);
   return (
     <div className="flex items-center flex-col ">
     <h2 ref={transactionhead} className="pb-2 text-xl lg:text-2xl w-96 text-center tracking-widest font-bold animate-pulse">Add New Transaction</h2>

@@ -8,7 +8,7 @@ function Balance(){
     let newbalance=useSelector(getbalance);
     useEffect(()=>{
        setCurrentBalance(newbalance);
-    });
+    },[newbalance]);
 
   return (
     <div className="my-5 mx-4 md:flex md:justify-center">
