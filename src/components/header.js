@@ -51,7 +51,7 @@ useEffect(()=>{
 
 },[])
   return (
-    <div className="flex  mx-4  w-3/4 md:ml-28 lg:ml-32 xl:ml-40 justify-center p-2 shadow-2xl rounded-3xl border" >
+    <div className="flex mx-4  w-3/4 ml-0 md:ml-2 lg:ml-32 xl:ml-40 justify-center p-2 shadow-2xl rounded-3xl border" >
       <h1 ref={h1Ref} className="text-2xl  border border-white dark:border-0 dark:text-white" >
         <span className="text-2xl hidden md:inline">Welcome To The </span>
         <span ref={spanRef} className="text-blue-900 dark:text-white text-2xl" >
