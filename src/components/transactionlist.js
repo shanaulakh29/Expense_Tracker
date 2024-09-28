@@ -26,7 +26,7 @@ function TransactionList(){
             <div className=" flex"><button className=" items-center text-xl border rounded-full px-2 hover:text-black hover:bg-white dark:hover:bg-black dark:hover:text-white" onClick={()=>{handleclick(index);}}>X</button></div>
            </li>
            <hr/>
-           </React.Fragment>)
+           </React.Fragment>);;;
            
       
         })
